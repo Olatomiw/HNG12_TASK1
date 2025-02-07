@@ -10,7 +10,9 @@ import org.springframework.web.method.annotation.MethodArgumentTypeMismatchExcep
 
 import java.awt.*;
 
-@RestController("api")
+@RestController
+@RequestMapping("api")
+@CrossOrigin(origins = "*")
 public class ClassifyController {
 
     private final NumberClassificationService numberClassificationService;
