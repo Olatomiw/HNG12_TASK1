@@ -10,9 +10,6 @@ public class NumberApiClassificationApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(NumberApiClassificationApplication.class, args);
-		NumberClassificationService numberClassificationService = new NumberClassificationService();
-		numberClassificationService.classifyNumber(100);
-		is_perfect_number(28);
 	}
 
 }
