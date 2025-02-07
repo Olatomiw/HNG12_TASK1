@@ -21,7 +21,7 @@ public class ClassifyController {
         this.numberClassificationService = numberClassificationService;
     }
 
-    @PostMapping("/classify-number")
+    @GetMapping("/classify-number")
     public ResponseEntity<?> classify(@RequestParam int number) {
         return numberClassificationService.classifyNumber(number);
     }
