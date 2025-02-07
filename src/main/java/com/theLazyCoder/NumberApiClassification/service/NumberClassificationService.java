@@ -36,7 +36,6 @@ public class NumberClassificationService {
         );
         assert response != null;
         logger.info(String.valueOf(apiResponse));
-        System.out.println(apiResponse);
         return new ResponseEntity<>(apiResponse, HttpStatus.OK);
     }
 
@@ -61,7 +60,6 @@ public class NumberClassificationService {
                 if(i != number/i) factorSum += number/i;
             }
         }
-        System.out.println(factorSum);
         return (
                 factorSum == number);
     }
@@ -71,12 +69,9 @@ public class NumberClassificationService {
         int armstrong=0;
         while (number > 0) {
             sum = (sum + number % 10);
-            System.out.println("first "+sum);
             armstrong += (int) pow(sum, 3);
-            System.out.println("pow " +armstrong);
             number /= 10;
         }
-        System.out.println("this is sum " + armstrong);
         return sum;
     }
     public boolean armstrong (int number) {
@@ -88,7 +83,6 @@ public class NumberClassificationService {
             sum += (int) pow(digit, numDigits);
             number /= 10;
         }
-        System.out.println(sum);
         return sum==originalNumber;
     }
 
